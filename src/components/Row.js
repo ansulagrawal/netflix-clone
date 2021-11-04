@@ -41,7 +41,7 @@ function Row({ title, fetchUrl, isLargerRow }) {
         })
     }
   }
-  // console.table(movies);
+
   return (
     <div>
       <div className="row">
@@ -53,7 +53,7 @@ function Row({ title, fetchUrl, isLargerRow }) {
               onClick={() => handleClick(movie)}
               key={movie.id}
               className={`row_poster ${isLargerRow && "row_poster_large"}`}
-              src={`${base_url}${isLargerRow ? movie.poster_path : movie.backdrop_path}`}
+              src={`${base_url}${isLargerRow ? movie.poster_path : movie.backdrop_path || movie.poster_path}`}
               alt={movie.name}
             />
           ))}
