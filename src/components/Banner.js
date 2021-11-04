@@ -31,7 +31,6 @@ function Banner() {
         backgroundPosition: "center center"
       }}
     >
-      {/* description */}
       <div className="banner_contents">
         <h1 className="banner_title">
           {movie?.title || movie?.name || movie?.orignal_name}
